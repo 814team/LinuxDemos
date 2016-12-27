@@ -1,0 +1,34 @@
+<html>
+<body>
+
+<h3>SSH作为Linux远程连接重要的方式，如何配置安装linux系统的SSH服务，如何开启SSH？下面来看看吧（本例为centos系统演示如何开启SSH服务）</h3>
+
+<h3>Linux系统下如何配置SSH？如何开启SSH？</h3>
+<h3>工具/原料</h3>
+<h3>linux  centos</h3>
+<h3>查询\安装SSH服务</h3>
+<h3>1</h3>
+<h3>1.登陆linux系统，打开终端命令。输入 rpm -qa |grep ssh 查找当前系统是否已经安装</h3>
+<h3>Linux系统下如何配置SSH？如何开启SSH？</h3>
+<h3>2</h3>
+<h3>2.如果没有安装SSH软件包，可以通过yum  或rpm安装包进行安装（具体就不截图了)</h3>
+<h3>Linux系统下如何配置SSH？如何开启SSH？</h3>
+<h3>END</h3>
+<h3>启动SSH服务2</h3>
+<h3>1</h3>
+<h3>安装好了之后，就开启ssh服务。Ssh服务一般叫做 SSHD</h3>
+<h3>命令行输入  service sshd start 可以启动  </h3>
+<h3>Linux系统下如何配置SSH？如何开启SSH？</h3>
+<h3>2</h3>
+<h3>或者使用 /etc/init.d/sshd start</h3>
+<h3>Linux系统下如何配置SSH？如何开启SSH？</h3>
+<h3>END</h3>
+<h3>配置\查看SSHD端口3</h3>
+<h3>1</h3>
+<h3>查看或编辑SSH服务配置文件，如 vi /etc/ssh/sshd.config   </h3>
+ <h3>如果要修改端口，把 port 后面默认的22端口改成别的端口即可（注意前面的#号要去掉）</h3>
+<h3>Linux系统下如何配置SSH？如何开启SSH？</h3>
+<h3>END</h3>
+<h3>远程连接SSH4</h3>
+<h3>如果需要远程连接SSH，需要把22端口在防火墙上开放。</h3>
+<h3>.关闭防火墙，或者设置22端口例外</h3>
