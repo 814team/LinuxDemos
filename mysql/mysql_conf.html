@@ -1,0 +1,20 @@
+
+<html>
+<head</head>
+<body>
+<ul>
+<li>
+CentOS 7的yum源中貌似没有正常安装mysql时的mysql-sever文件，需要去官网上下载</li>
+<li># wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm</li>
+<li># rpm -ivh mysql-community-release-el7-5.noarch.rpm</li>
+<li># yum install mysql-community-server</li>
+<li>成功安装之后重启mysql服务</li>
+<li># service mysqld restart</li>
+<li>初次安装mysql是root账户是没有密码的</li>
+<li>设置密码的方法</li>
+<li># mysql -uroot</li>
+<li>mysql> set password for ‘root’@‘localhost’ = password('mypasswd');</li>
+<li>mysql> exit</li>
+<ul>
+</body>
+</html>
