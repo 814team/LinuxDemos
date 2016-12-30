@@ -15,6 +15,17 @@ CentOS 7的yum源中貌似没有正常安装mysql时的mysql-sever文件，需要去官网上下载</li>
 <li># mysql -uroot</li>
 <li>mysql> set password for ‘root’@‘localhost’ = password('mypasswd');</li>
 <li>mysql> exit</li>
+
+
+<li>编码方式设置</li>
+<li>[代码]MySQL 5.6.17 的设置  </li>  
+
+<li>[mysqld] </li>
+<li>character-set-server=utf8 </li>
+<li>collation-server=utf8_general_ci</li>
+<li>2. [代码]其他未知版本的设置(可能是旧版本的)   	</li>
+<li>[mysqld]</li>
+<li>default-character-set=utf8</li>
 <ul>
 </body>
 </html>
