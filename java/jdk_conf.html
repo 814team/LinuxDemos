@@ -3,42 +3,43 @@
 </head>
 <body>
 <ul>
-<li>getconf LONG_BIT   #  ²é¿´ÏµÍ³¶àÉÙÎ»</li>
-<li>wget http://download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-linux-x64.tar.gz #ÏÂÔØjdk8 ¿ÉÒÔ×Ô¼ºÈ¥¹ÙÍø¸´ÖÆµØÖ·</li>
+ <li>æœ€ç®€å•æœ€ç›´æ¥çš„æ–¹å¼å°±æ˜¯ä¸‹è½½å¥½å®‰è£…åŒ…ç„¶åè§£å‹ç›´æ¥é…ç½®ç¯å¢ƒå˜é‡ä¸ä¼šå‡ºç°å¤šå°‘é—®é¢˜ç¯å¢ƒå˜é‡å¯ä»¥å‚è€ƒä¸‹é¢çš„</li>
+<li>getconf LONG_BIT   #  æŸ¥çœ‹ç³»ç»Ÿå¤šå°‘ä½</li>
+<li>wget http://download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-linux-x64.tar.gz #ä¸‹è½½jdk8 å¯ä»¥è‡ªå·±å»å®˜ç½‘å¤åˆ¶åœ°å€</li>
  
-<li>¶ş¡¢°²×°JDK7.0°æ±¾</li>
-<li>1¡¢ÏÈĞ¶ÔØ·şÎñÆ÷×Ô´øµÄjdkÈí¼ş°ü</li>
-<li># java -version     #²é¿´·şÎñÆ÷ÊÇ·ñ°²×°¹ıjdk</li>
+<li>äºŒã€å®‰è£…JDK7.0ç‰ˆæœ¬</li>
+<li>1ã€å…ˆå¸è½½æœåŠ¡å™¨è‡ªå¸¦çš„jdkè½¯ä»¶åŒ…</li>
+<li># java -version     #æŸ¥çœ‹æœåŠ¡å™¨æ˜¯å¦å®‰è£…è¿‡jdk</li>
 <li>java version "1.6.0_17"</li>
 <li>OpenJDK Runtime Environment (IcedTea6 1.7.4) (rhel-1.21.b17.el6-i386)</li>
 <li>OpenJDK Client VM (build 14.0-b16, mixed mode)</li>
-<li># rpm -qa |grep gcj   #²é¿´·şÎñÆ÷°²×°µÄjdkÈí¼ş°üĞÅÏ¢</li>
+<li># rpm -qa |grep gcj   #æŸ¥çœ‹æœåŠ¡å™¨å®‰è£…çš„jdkè½¯ä»¶åŒ…ä¿¡æ¯</li>
 <li>libgcj-4.4.4-13.el6.i686</li>
 <li>java-1.5.0-gcj-1.5.0.0-29.1.el6.i686</li>
-<li>#  yum -y remove java-1.5.0-gcj-1.5.0.0-29.1.el6.i686    #Ğ¶ÔØÈí¼ş°ü</li>
-<li>2¡¢°²×°jdk7.0  </li>
-<li>½âÑ¹ÅäÖÃ°²×°</li>
+<li>#  yum -y remove java-1.5.0-gcj-1.5.0.0-29.1.el6.i686    #å¸è½½è½¯ä»¶åŒ…</li>
+<li>2ã€å®‰è£…jdk7.0  </li>
+<li>è§£å‹é…ç½®å®‰è£…</li>
 <li># mkdir -p /usr/lib/jvm</li>
 <li># tar zxvf jdk-7u9-linux-i586.tar.gz  -C /usr/lib/jvm</li>
 <li># mv /usr/lib/jvm/jdk1.7.0_09    /usr/lib/jvm/java7</li>
-<li>3¡¢Ìí¼Ójdk7.0µ½ÏµÍ³»·¾³±äÁ¿</li>
-<li>££¡¡cp /etc/profile /etc/profile.bak    #±¸·İ</li>
-<li>££¡¡vi /etc/profile     #±à¼­,ÔÚ×îºóÌí¼ÓÏÂÃæµÄÄÚÈİ </li>
+<li>3ã€æ·»åŠ jdk7.0åˆ°ç³»ç»Ÿç¯å¢ƒå˜é‡</li>
+<li>ï¼ƒã€€cp /etc/profile /etc/profile.bak    #å¤‡ä»½</li>
+<li>ï¼ƒã€€vi /etc/profile     #ç¼–è¾‘,åœ¨æœ€åæ·»åŠ ä¸‹é¢çš„å†…å®¹ </li>
 <li>export JAVA_HOME=/usr/lib/jvm/java7</li>
 <li>export JRE_HOME=${JAVA_HOME}/jre  </li>
 <li>export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib  </li>
 <li>export PATH=${JAVA_HOME}/bin:$PATH </li>
-<li>££¡¡source /etc/profile ¡¡¡¡¡¡#Ê¹ÅäÖÃÎÄ¼şÁ¢¼´ÉúĞ§</li>
-<li>ÓÉÓÚÏµÍ³ÖĞ¿ÉÄÜ»áÓĞÄ¬ÈÏµÄÆäËû°æ±¾JDK£¬ËùÒÔ£¬ÎªÁË½«ÎÒÃÇ°²×°µÄJDKÉèÖÃÎªÄ¬ÈÏJDK°æ±¾£¬»¹Òª½øĞĞÈçÏÂ¹¤×÷¡£</li>
+<li>ï¼ƒã€€source /etc/profile ã€€ã€€ã€€#ä½¿é…ç½®æ–‡ä»¶ç«‹å³ç”Ÿæ•ˆ</li>
+<li>ç”±äºç³»ç»Ÿä¸­å¯èƒ½ä¼šæœ‰é»˜è®¤çš„å…¶ä»–ç‰ˆæœ¬JDKï¼Œæ‰€ä»¥ï¼Œä¸ºäº†å°†æˆ‘ä»¬å®‰è£…çš„JDKè®¾ç½®ä¸ºé»˜è®¤JDKç‰ˆæœ¬ï¼Œè¿˜è¦è¿›è¡Œå¦‚ä¸‹å·¥ä½œã€‚</li>
 <li>update-alternatives --install /usr/bin/java java /usr/lib/jvm/java7/bin/java 300  </li>
 <li>update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/java7/bin/javac 300  </li>
 <li>update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/java7/bin/jar 300   </li>
 <li>update-alternatives --install /usr/bin/javah javah /usr/lib/jvm/java7/bin/javah 300  </li> 
 <li>update-alternatives --install /usr/bin/javap javap /usr/lib/jvm/java7/bin/javap 300  </li>
-<li>Ö´ĞĞÏÂÃæÃüÁî£¬ÉèÖÃÄ¬ÈÏ°æ±¾£¬´ËÃüÁîÖ´ĞĞºó£¬ÏµÍ³»áÁĞ³öµ±Ç°´æÔÚµÄ¸÷ÖÖJDK°æ±¾£¬»áÌáÊ¾ÄãÑ¡Ôñ</li>
+<li>æ‰§è¡Œä¸‹é¢å‘½ä»¤ï¼Œè®¾ç½®é»˜è®¤ç‰ˆæœ¬ï¼Œæ­¤å‘½ä»¤æ‰§è¡Œåï¼Œç³»ç»Ÿä¼šåˆ—å‡ºå½“å‰å­˜åœ¨çš„å„ç§JDKç‰ˆæœ¬ï¼Œä¼šæç¤ºä½ é€‰æ‹©</li>
 <li># update-alternatives --config java</li>
-<li>4¡¢²âÊÔ</li>
-<li># java -version       # ²âÊÔÊÇ·ñ³É¹¦ </li>
+<li>4ã€æµ‹è¯•</li>
+<li># java -version       # æµ‹è¯•æ˜¯å¦æˆåŠŸ </li>
 <li>java version "1.7.0_09"</li>
 <li>Java(TM) SE Runtime Environment (build 1.7.0_09-b05)</li>
 <li>Java HotSpot(TM) Client VM (build 23.5-b02, mixed mode)</li>
